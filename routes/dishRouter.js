@@ -16,8 +16,19 @@ dishRouter.route('/')
 		res.send('Will send all the dishes to you.');
 	})
 	.post((req, res) => {
-		console.log(req);
-		res.send('GET REQUEST');
+		console.log(req.body);
+		res.send('POST REQUEST');
+	});
+
+dishRouter.route('/:dishId')
+	.all((req, res, next) => {
+		console.log('GETTING INFO...');
+		res.statusCode = 200;
+		res.setHeader('Content-Type', 'text/plain');
+		next();
+	})
+	.get((req, res, next) => {
+		res.end(JSON.stringify(req.params));
 	});
 
 module.exports = dishRouter;
