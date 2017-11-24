@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <style>
+        html, body {
+            min-height: 100%;
+            height: auto;
+        }
+
+        body {
+            background: #00012d linear-gradient(to bottom, #000146 0%, #00012d 100%) no-repeat;
+        }
+
+        main {
+
+        }
+
+        .answer {
+            padding: 10px 0;
+            font-size: 20px;
+        }
+
+        .answer__radio {
+            margin: 0;
+            margin-right: 10px;
+        }
+
+        #canvas {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            min-height: 100%;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="root"></div>
+</main>
+<canvas id="canvas" moz-opaque></canvas>
+<script src="index.js"></script>
+<script src="show.js"></script>
+</body>
+</html>
